@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.6.9
+#### IDE plugin
+* Add "Replace Spotlight with Selection" action (Cmd+Shift+I) to replace the entire module selection with the currently selected project(s)
+* Add notifications when a project is added/removed from Spotlight
+* Actions are now dumb-aware
+* Fix error returning null widget presentation
+* Bump minimum and target IntelliJ version to 252
+
 ### 1.6.8
 #### IDE plugin
 * Change default indexing behavior to `ALL_PROJECTS_EXCLUDE_BUILD`
