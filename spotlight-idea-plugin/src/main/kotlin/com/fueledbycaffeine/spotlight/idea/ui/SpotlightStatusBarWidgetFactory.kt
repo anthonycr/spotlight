@@ -107,7 +107,7 @@ private class SpotlightStatusBarWidget(
     return SpotlightBundle.message("statusbar.widget.tooltip", ideProjectsCount)
   }
 
-  override fun getClickConsumer(): Consumer<MouseEvent> {
+  override fun getClickConsumer(): Consumer<MouseEvent>? {
     return Consumer {
       // Open ide-projects.txt
       project.spotlightService.openIdeProjectsInEditor()
