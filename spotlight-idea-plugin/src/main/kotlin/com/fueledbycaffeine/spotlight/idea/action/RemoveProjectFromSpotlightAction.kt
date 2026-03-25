@@ -11,14 +11,14 @@ import com.intellij.icons.AllIcons
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.actionSystem.ActionUpdateThread
-import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.diagnostic.Logger
+import com.intellij.openapi.project.DumbAwareAction
 
 /**
  * A right-click context action that removes selected projects from [IDE_PROJECTS_LOCATION]
  */
-class RemoveProjectFromSpotlightAction : AnAction() {
+class RemoveProjectFromSpotlightAction : DumbAwareAction() {
   override fun actionPerformed(action: AnActionEvent) {
     val project = action.project ?: return
     val spotlightService = project.spotlightService
