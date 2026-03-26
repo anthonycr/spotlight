@@ -171,7 +171,7 @@ Your custom parser will now be automatically discovered and run alongside the bu
 ## Differences from Focus
 Unlike [Focus][focus], which configures your gradle project to select which projects get synced using the `:createFocusSettings` task provided by the plugin, Spotlight relies on parsing of your buildscripts with regexes to compute the dependency graph, which is much faster.
 
-Spotlight does not include any Gradle tasks to manage your `all-projects.txt` or `ide-projects.txt` lists, and instead relies on external tooling ([IDE plugin][jb-marketplace-page], shell command) to avoid invoking Gradle.
+If your build graph changes, you need to rerun Focus analysis manually to avoid broken sync. Spotlight quickly computes the required projects on every Gradle invocation.
 
 ## Differences from dependency-explorer
 dependency-explorer runs completely outside Gradle, and users must rerun the build graph query whenever their dependency graph changes to avoid errors during IDE sync. Both `dependency-explorer` and Spotlight use similar approaches for parsing the build graph, but Spotlight just does it automatically inside a settings plugin.
