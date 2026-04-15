@@ -227,7 +227,7 @@ class SpotlightLintTasksFunctionalTest {
     val projectsList = originalProjectsList
       .filterNot { it.startsWith(":rotoscope:") }
     allProjects.writeText(projectsList.joinToString(separator = "\n", postfix = "\n"))
-
+    
     val expectedMissingCount = originalProjectsList.count { it.startsWith(":rotoscope:") }
 
     // When
